@@ -15,12 +15,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Create test user
-        User::create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-            'password' => Hash::make('password123'),
-        ]);
-
+        User::firstOrCreate(
+            ['email' => 'test@example.com'], // search condition
+            [
+                'name' => 'Test User',
+                'password' => bcrypt('password'),
+            ]
+        );
+        
         // Create subjects
         $subjects = [
             ['name' => 'Mathematics', 'code' => 'MATH', 'description' => 'Mathematics papers'],
