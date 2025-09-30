@@ -1,4 +1,5 @@
 <?php
+// database/seeders/DatabaseSeeder.php
 
 namespace Database\Seeders;
 
@@ -15,14 +16,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Create test user
-        User::firstOrCreate(
-            ['email' => 'test@example.com'], // search condition
-            [
-                'name' => 'Test User',
-                'password' => bcrypt('password'),
-            ]
-        );
-        
+        User::create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+            'password' => Hash::make('password123'),
+        ]);
+
         // Create subjects
         $subjects = [
             ['name' => 'Mathematics', 'code' => 'MATH', 'description' => 'Mathematics papers'],
@@ -100,3 +99,5 @@ class DatabaseSeeder extends Seeder
         return $answers[array_rand($answers)];
     }
 }
+
+// Run with: php artisan db:seed

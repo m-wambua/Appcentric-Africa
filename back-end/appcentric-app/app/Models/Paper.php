@@ -7,7 +7,7 @@ use Laravel\Scout\Searchable;
 
 class Paper extends Model
 {
-    use HasFactory, Searchable;
+    use HasFactory;// Searchable;
 
     protected $fillable = ['subject_id', 'year', 'title', 'description'];
 
