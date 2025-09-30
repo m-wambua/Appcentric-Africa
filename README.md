@@ -1,4 +1,4 @@
-Features
+**Features**
 Backend – Laravel REST API
 
 Database Structure
@@ -77,8 +77,7 @@ Rate Limiting – 50 requests/min, enforced at backend
 Search & Pagination – efficient dataset handling
 
 Secure Authentication – token-based with secure storage
-
-🛠️ Tech Stack
+ Tech Stack
 
 Backend: Laravel, Sanctum (JWT), MySQL/PostgreSQL
 
@@ -91,12 +90,12 @@ Backend (Laravel API)
 Clone the repo:
 
 
-cd backend/appcenctric-app
+``cd backend/appcenctric-app``
 
 
 
 Install dependencies:
-composer install
+``composer install``
 
 Configure .env:
 
@@ -105,26 +104,26 @@ Database connection
 Sanctum/JWT settings
 
 Run migrations & seeders:
-php artisan migrate --seed
+``php artisan migrate --seed``
 
 
 
 Start server:
-php artisan serve
+``php artisan serve``
 
 
 Frontend (Flutter App)
 
 
-cd appcentricafrica
+``cd appcentricafrica``
 
 Get dependencies:
-flutter pub get
+``flutter pub get``
 
 Update API base URL in lib/config.dart.
 
 Run app:
-flutter run
+``flutter run``
 
 Default Test Credentials
 
